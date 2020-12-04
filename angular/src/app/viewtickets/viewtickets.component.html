@@ -1,0 +1,36 @@
+
+ <div class="col-md-8 offset-2 mt-3">
+  <table class="table">
+      <thead class = "thead-dark">
+          <tr>
+              <th>TicketId</th>
+              <th>CustomerId</th>
+              <th>FlightId</th>
+              <th>Source</th>
+              <th>Destination</th>
+              <th>DateOfBooking</th>
+              <th>TakeOffTime</th>
+              <th>ArivalTime</th>
+               <th>Cancel</th>
+          </tr>
+      </thead>
+       <tbody>
+
+          <tr *ngFor ='let bookedTickets of bookedTicket'>
+              <td>{{bookedTickets.ticketId}}</td>
+              <td>{{bookedTickets.customerId}}</td>
+              <td>{{bookedTickets.flightId}}</td>
+              <td>{{bookedTickets.source}}</td>
+              <td>{{bookedTickets.destination}}</td>
+              <td>{{bookedTickets.dateOfBooking}}</td>
+              <th>{{bookedTickets.takeOffTime}}</th>
+              <td>{{bookedTickets.arivalTime}}</td>
+          <td>
+                  <button type="button" class="btn btn-danger" (click)="deleteTicket(bookedTickets.ticketId)">Cancel</button>
+          </td>
+          </tr>
+      </tbody>
+
+  </table>
+</div>
+

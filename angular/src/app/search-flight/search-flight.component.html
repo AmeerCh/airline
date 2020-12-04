@@ -1,0 +1,30 @@
+
+ <div class="col-md-8 offset-2 mt-5">
+  <table class="table">
+      <thead class = "thead-dark">
+          <tr>
+              <th>FlightId</th>
+              <th>Source</th>
+              <th>Destination</th>
+              <th>Day</th>
+              <th>TakeOffTime</th>
+              <th>ArivalTime</th>
+              <th>Price</th>
+          </tr>
+      </thead>
+       <tbody>
+
+          <tr *ngFor = "let flights of flight">
+
+              <td>{{flights.flightId}}</td>
+              <td>{{flights.source}}</td>
+              <td>{{flights.destination}}</td>
+              <td>{{flights.flightDay}}</td>
+              <td>{{flights.takeOffTime}}</td>
+              <td>{{flights.arivalTime}}</td>
+              <th>{{flights.priceOfFlight}}</th>
+          </tr>
+      </tbody>
+
+  </table>
+</div>

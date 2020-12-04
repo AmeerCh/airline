@@ -1,0 +1,64 @@
+
+
+<div class="container-fluid ml-4 mt-2">
+  <div class="row container ml-4" >
+    <div class="col-sm-3 col-md-6 col-lg-4" >
+      <h3>Quinnox Airline</h3>
+      <img src="https://i.pinimg.com/originals/db/70/1b/db701bfc9859a6b8c605c4981b91eee1.jpg" height="150px" width="300px">
+      <h3>Flight Booking</h3>
+      <img  src="https://th.bing.com/th/id/OIP.iHWkLL3bHL5TrmxvzPKSfAAAAA?w=242&h=176&c=7&o=5&dpr=1.1&pid=1.7" height="150px" width="300px">
+    </div>
+    <div class="col-sm-4 " style="margin-top: 35px;" >
+      <p >Quinnox Airline is aimed at bringing the best in air travels to you. Our outstanding records among airlines
+         makes us achieve this. Our staff members are adequate and loyal. We are  aimed at giving you the best services.
+      </p>
+      <p style="margin-top: 70px; margin-bottom: 0rem">This Airline is aimed at bringing the best in air travels to you. Our outstanding records among airlines
+        makes us achieve this. Our staff members are adequate and loyal. We are  aimed at giving you the best services.
+     </p>
+    </div>
+    <div class="col-sm-4 " style="margin-top: 10px; padding-left:80px">
+      <h3 style="color: red; font-size: medium;">{{message}}</h3>
+      <form #search="ngForm" (ngSubmit)="searchFlight(search)">
+        <div class="form-group">
+          <label>
+          <input type="text" name="flyingFrom" class="col" placeholder=" " #flyingFrom="ngModel" ngModel required>
+          <span>Flying From</span>
+          <div style="color: red;" *ngIf="flyingFrom.touched && flyingFrom.value.length<=2 && flyingFrom.value!=null">This field is required</div>
+
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="text" name="movingTo" class="col" placeholder=" " #movingTo="ngModel" ngModel required>
+            <span>Moving To</span>
+            <div style="color: red;" *ngIf="movingTo.touched && movingTo.value.length<=2 && movingTo.value!=null">This field is required</div>
+
+            </label>
+        </div>
+        <div class="form-group">
+          <!-- <label>
+            <input name="departureDate" type="text" placeholder=" " onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" class="col">
+            <span>Departure Date</span>
+         </label> -->
+         <label>
+          <input type="text" name="flightDay" class="col" placeholder=" " #flightDay="ngModel" ngModel required>
+          <span>Flight Day</span>
+          <div style="color: red;" *ngIf="flightDay.touched && flightDay.value.length<=4 && flightDay.value!=null">This field is required</div>
+          </label>
+        </div>
+
+        <div>
+          <button type = "submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<footer style="position: fixed;width:100%; bottom: 0px;" class="bg-dark">
+  <div class="container mt-2">
+    <p style="padding-left: 400px; color: whitesmoke; font-size: small;">Copyright @2020 Quinnox Airline All rights reserved
+    </p>
+  </div>
+</footer>

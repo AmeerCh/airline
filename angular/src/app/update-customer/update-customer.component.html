@@ -1,0 +1,91 @@
+<div class="container-fluid  mt-2 ">
+  <div class="container">
+    <form [formGroup]="update" (ngSubmit)="updateCustomer(update)">
+      <h2 style="color:green; font-size: medium;">{{message}}</h2>
+      <h3 style="padding-left: 320px;">Update the Customer Details</h3>
+      <div class="row container" >
+        <div class="col-sm-3 col-md-6 col-lg-4"  >
+          <div class="form-group">
+            <label>
+            <input type="number" name="customerId" class="col" placeholder=" " [(ngModel)]="cId" formControlName="customerId">
+            <span>CustomerId</span>
+            <div style="color: red;" *ngIf="update.get('customerId').touched && update.get('customerId').value<=0">Enter the CustomerName</div>
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="text" name="address" class="col" placeholder=" " [(ngModel)]="add" formControlName="address">
+            <span>Address</span>
+            <div style="color: red;" *ngIf="update.get('address').touched && update.get('address').value<=2">Enter the Address</div>
+          </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="number" name="phoneNumber" class="col" placeholder=" " [(ngModel)]="phone" formControlName="phoneNumber">
+            <span>phone number</span>
+            <div style="color: red;" *ngIf="update.get('phoneNumber').touched && update.get('phoneNumber').value<=10">Enter the Phone number</div>
+            </label>
+          </div>
+
+          <div>
+            <div>
+              <button type="submit" class="btn btn-secondary" name="submit">Update</button>
+              <button type="reset" class="btn btn-secondary ml-2" name="submit">Reset</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4  " >
+          <div class="form-group">
+            <label>
+            <input type="text" name="customerName" class="col" placeholder=" " [(ngModel)]="name" formControlName="customerName">
+            <span>Name</span>
+            <div style="color: red;" *ngIf="update.get('customerName').touched && update.get('customerName').value<=2">Enter the CustomerName</div>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>
+            <input type="text" name="country" class="col" placeholder=" " [(ngModel)]="coun" formControlName="country">
+            <span>Country</span>
+            <div style="color: red;" *ngIf="update.get('country').touched && update.get('country').value<=2">Enter the country</div>
+          </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="text" name="email" class="col" placeholder=" " [(ngModel)]="mail" formControlName="email">
+              <span>Email</span>
+            <div style="color: red;" *ngIf="update.get('email').touched && update.get('email').value<=2">Enter the email</div>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-4 " >
+          <div class="form-group">
+            <label>
+            <input name="customerDOB" type="text" placeholder=" " onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" class="col" [(ngModel)]="dob" formControlName="customerDOB">
+            <span> DOB</span>
+           <div style="color: red;" *ngIf="update.get('customerDOB').touched && update.get('customerDOB').value<=2">Enter the DOB</div>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>
+            <input type="text" name="nationality" class="col" placeholder=" " [(ngModel)]="nation" formControlName="nationality">
+              <span>nationality</span>
+            <div style="color: red;" *ngIf="update.get('nationality').touched && update.get('nationality').value<=2">Enter the nationality</div>
+           </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="password" name="password" class="col" placeholder=" " [(ngModel)]="pass" formControlName="password">
+            <span>Password</span>
+            <div style="color: red;" *ngIf="update.get('password').touched && update.get('password').value<=2">Enter the password</div>
+          </label>
+            </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,43 @@
+
+ <div class="col-md-8  mt-3">
+  <table class="table">
+      <thead class = "thead-dark">
+          <tr>
+              <th>CustomerId</th>
+              <th>CustomerName</th>
+              <th>CustomerDOB</th>
+              <th>Country</th>
+              <th>Nationality</th>
+              <th>PhoneNumber</th>
+              <th>Address</th>
+              <th>Email</th>
+               <th>Password</th>
+               <th>Update</th>
+
+          </tr>
+      </thead>
+       <tbody>
+
+          <tr >
+
+              <td>{{customer.customerId}}</td>
+              <td>{{customer.customerName}}</td>
+              <td>{{customer.customerDOB}}</td>
+              <td>{{customer.country}}</td>
+              <td>{{customer.nationality}}</td>
+              <td>{{customer.phoneNumber}}</td>
+              <th>{{customer.address}}</th>
+              <td>{{customer.email}}</td>
+              <th>{{customer.password}}</th>
+
+              <td>
+                  <button type="button" class="btn btn-info" (click)="updateCustomer()">Update</button>
+          </td>
+
+          </tr>
+      </tbody>
+
+  </table>
+</div>
+
+

@@ -1,0 +1,66 @@
+<div class="container-fluid  mt-2 offset-2">
+  <div class="container">
+    <form [formGroup]="addFlight" (ngSubmit)="addFlightSchedule(addFlight)">
+      <h2 style="color:green; font-size: medium;">{{message}}</h2>
+      <h3 style="padding-left: 140px;">Add New Flight Schedule </h3>
+      <div class="row container" >
+        <div class="col-sm-3 col-md-6 col-lg-4"  >
+          <div class="form-group">
+            <label>
+            <input type="text" name="source" class="col" placeholder=" " formControlName="source" required>
+            <span>Source</span>
+            <div style="color: red;" *ngIf="addFlight.get('source').touched && addFlight.get('source').value<=2">Enter the Source</div>
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="text" name="flightDay" class="col" placeholder=" " formControlName="flightDay">
+            <span>Flight Day</span>
+            <div style="color: red;" *ngIf="addFlight.get('flightDay').touched && addFlight.get('flightDay').value<=2">Enter the Flight Day</div>
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="text" name="takeOffTime" class="col" placeholder=" " formControlName="takeOffTime">
+              <span>Take-Off-Time</span>
+            <div style="color: red;" *ngIf="addFlight.get('takeOffTime').touched && addFlight.get('takeOffTime').value<=2">Enter the Take-Off-Time</div>
+            </label>
+          </div>
+          <div>
+            <div>
+              <button type="submit" class="btn btn-secondary" name="submit">Add</button>
+              <button type="reset" class="btn btn-secondary ml-2" name="submit">Reset</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4  " >
+
+          <div class="form-group">
+            <label>
+            <input type="text" name="destination" class="col" placeholder=" " formControlName="destination">
+            <span>Destination</span>
+            <div style="color: red;" *ngIf="addFlight.get('destination').touched && addFlight.get('destination').value<=10">Enter the Destination</div>
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="number" name="priceOfFlight" class="col" placeholder=" " formControlName="priceOfFlight">
+            <span>Price</span>
+            <div style="color: red;" *ngIf="addFlight.get('priceOfFlight').touched && addFlight.get('priceOfFlight').value<=2">Enter the Price</div>
+          </label>
+          </div>
+          <div class="form-group">
+            <label>
+            <input type="text" name="arivalTime" class="col" placeholder=" " formControlName="arivalTime">
+            <span>Arival Time</span>
+            <div style="color: red;" *ngIf="addFlight.get('arivalTime').touched && addFlight.get('arivalTime').value<=2">Enter the Arival Time</div>
+          </label>
+        </div>
+          </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,35 @@
+  <h3 style="text-align: center; color: red;">{{message}}</h3>
+        <form #form="ngForm" (ngSubmit)="login(form)" class="offset-md-4 col-md-5  mt-5" >
+          <div>
+            <h3 >Login Page</h3>
+          </div>
+          <div class="form-group col-md-5 mt-4" style="margin-left: -1rem;">
+            <label>
+            <input type="text" name="email" class="col" placeholder=" " #email="ngModel" ngModel required>
+            <span>Enter the Email</span>
+            <div style="color: red;" *ngIf="email.touched && email.value.length<=4 && email.value!=null">This field is required.</div>
+          </label>
+          </div>
+          <div class="form-group col-md-5 mt-4" style="margin-left: -1rem;">
+            <label>
+            <input type="password" name="password" class="col" placeholder=" " #password="ngModel" ngModel required>
+            <span>Enter the Password</span>
+            <div style="color: red;" *ngIf="password.touched && password.value.length<=4 && password.value!=null">password should have atleast 4 characters</div>
+          </label>
+          </div>
+          <div >
+            <button type="submit" class="btn btn-secondary mb-3 " name="submit">SignIn</button>
+            <button type="reset" class="btn btn-secondary ml-2 mb-3" name="submit">Reset</button>
+          </div>
+      </form>
+
+
+
+
+
+
+
+
+
+
+
